@@ -19,6 +19,7 @@ describe('constructor', function() {
   it('empty ops', function() {
     var delta = new Delta()
       .insert('')
+      .insert(undefined)
       .delete(0)
       .retain(0);
     expect(delta).toBeDefined();

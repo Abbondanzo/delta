@@ -24,6 +24,9 @@ class Delta {
 
   insert(arg: string | object, attributes?: AttributeMap): this {
     const newOp: Op = {};
+    if (arg === undefined) {
+      return this;
+    }
     if (typeof arg === 'string' && arg.length === 0) {
       return this;
     }
